@@ -1,0 +1,52 @@
+.App {
+  display: grid;
+  grid-template-areas: 
+    "sidebar header"
+    "sidebar content";
+
+    grid-template-columns: 20vw 1fr;
+    grid-template-rows: 
+      100px auto;
+
+    grid-gap: 1em;
+    height: 100vh;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.Sidebar {
+  grid-area: sidebar;
+  text-align: left;
+  width: 20vw;
+  height: 100vh;
+  color: black;
+  background-color: yellow;
+}
+
+.SidebarHeader {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border: black;
+  border-style: solid;
+}
+
+.SidebarElement {
+  padding-top: 5em;
+}
+
+.Body {
+  grid-area: content;
+  padding: 2em;
+}
+
+.Header {
+  grid-area: header;
+  background-color: blueviolet;
+}
+
+.GymDetails {
+  display: flex;
+}
