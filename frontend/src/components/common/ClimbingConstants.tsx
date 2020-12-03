@@ -76,3 +76,38 @@ export const colorMap:Map<string, GymHoldColor> = new Map([
   ["Dark Purple", {name: "Dark Purple", industryName: "17-16", hex: "#35165f"}],
 
 ])
+
+export const simpleColorMap:Map<string, GymHoldColor> = new Map([
+  // 50 SHADES OF GREY
+  ["White", {name: "White", industryName: "12-01", hex: "#ffffff"}],
+  ["Grey", {name: "Grey", industryName: "18-09", hex: "#969090"}],
+  ["Black", {name: "Black", industryName: "18-01", hex: "#1a1a1a"}],
+
+  // REDS
+  ["Red", {name: "Red", industryName: "11-12", hex: "#e7202b"}],
+
+  // PINK
+  ["Pink", {name: "Pink", industryName: "11-26", hex: "#fe38d1"}],
+
+  // ORANGES
+  ["Orange", {name: "Orange", industryName: "14-01", hex: "#ff5a00"}],
+
+  // YELLOWS
+  ["Yellow", {name: "Yellow", industryName: "15-12", hex: "#fceb31"}],
+
+  // BROWN
+  ["Brown", {name: "Brown", industryName: "11-17", hex: "#995b50"}],
+  ["Dune", {name: "Dune", industryName: "15-06", hex: "#cfa364"}],
+
+  // GREEN
+  ["Green", {name: "Green", industryName: "16-16", hex: "#399f28"}],
+  ["Bright Green", {name: "Bright Green", industryName: "16-08", hex: "#87b23f"}],
+
+  // BLUE
+  ["Blue", {name: "Blue", industryName: "13-01", hex: "#0072c6"}],
+  ["Light Blue", {name: "Light Blue", industryName: "13-15", hex: "#67a6d1"}],
+
+  // PURPLE
+  ["Purple", {name: "Purple", industryName: "07-13", hex: "#533d93"}],
+
+])

@@ -2,7 +2,6 @@ import React from 'react'
 import { gql, useQuery } from '@apollo/client'
 
 import { GymData, GymID } from "./Types"
-
 import { GymRouteTable } from "./GymRouteTable"
 import { GymRouteAddModal } from "./GymRouteAddModal"
 
@@ -55,8 +54,6 @@ query GetRouteFromGym($id: bigint) {
 `
 
 
-
-
 export const Routes = (id: GymID) => {
 
   const [modalIsOpen, setIsOpen] = React.useState(false)
@@ -68,6 +65,7 @@ export const Routes = (id: GymID) => {
 
   if (loading) return ( <h1>Routes</h1> )
   if (error) return ( <h1>`Error: ${error.message}`</h1> )
+
   return (
     <div>
       <div style={{"display": "flex"}}>
@@ -79,6 +77,7 @@ export const Routes = (id: GymID) => {
       <GymRouteAddModal 
         gym_wall={ data?.gym_wall } 
         gym_rope={ data?.gym_rope } 
+        setter={ data?.setter }
         isOpen={ modalIsOpen } 
         setParentOpen={ setIsOpen }
       />

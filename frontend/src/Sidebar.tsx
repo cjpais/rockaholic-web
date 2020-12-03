@@ -28,6 +28,9 @@ export class Sidebar extends React.Component {
         <div className="SidebarElement">
           <Link to="/routes">Routes</Link>
         </div>
+        <div className="SidebarElement">
+          <Link to="/qr">QR</Link>
+        </div>
       </div>
     );
   }

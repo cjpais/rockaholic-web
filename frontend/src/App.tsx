@@ -2,12 +2,14 @@ import React from 'react';
 import './App.css';
 import { Sidebar } from "./Sidebar"
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
+import printer from "./printer.svg"
 
 import { Gyms } from "./components/gym/Gym"
 import { Walls } from "./components/gym/GymWall"
 import { Ropes } from "./components/gym/GymRope"
 import { Setters } from "./components/gym/GymSetter"
 import { Routes } from "./components/gym/GymRoute"
+import { QRComparison } from "./components/gym/QRComparison"
 
 import {
   BrowserRouter as Router,
@@ -27,7 +29,12 @@ function App() {
         <div className="App">
           <Sidebar />
 
-          <div className="Header"></div>
+          <div className="Header">
+            <button>
+              {/* TODO show little notificaiton thingy? */}
+              <img style={{backgroundColor: "transparent"}} src={printer} alt="printer" height="32px"></img>
+            </button>
+          </div>
 
           <div className="Body">
             <Switch>
@@ -48,6 +55,9 @@ function App() {
               </Route>
               <Route path="/routes">
                 <Routes id={2}/>
+              </Route>
+              <Route path="/qr">
+                <QRComparison />
               </Route>
             </Switch>
           </div>

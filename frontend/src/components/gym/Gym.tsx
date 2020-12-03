@@ -19,6 +19,9 @@ query Gyms {
 }
 `
 
+// TODO what are the items the gym needs to upload when they sign up?
+// Branding image (transparent png or svg 512x512)
+
 export function Gyms() {
   const { loading, error, data } = useQuery(GET_GYMS)
 

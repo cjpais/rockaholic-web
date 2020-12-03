@@ -22,7 +22,7 @@ const dot = (color = '#ccc') => ({
     marginRight: 8,
     height: "1em",
     width: "1em",
-    borderColor: "#cccccc75",
+    borderColor: `${chroma(color).darken().hex()}`,
     borderWidth: "1px",
     borderStyle: "solid",
   },
@@ -135,9 +135,9 @@ export const GymRouteAddModal: React.FC<GymRouteAddModalData> = (data: GymRouteA
           <div>
             <h3>Route Type</h3>
             <input type="radio" id="boulder" name="route-type" value="Boulder" onChange={setBoulder}/>
-            <label>Boulder</label>
+            <label> Boulder</label>
             <input type="radio" id="sport" name="route-type" value="sport" onChange={setSport}/>
-            <label>Sport</label>
+            <label> Sport</label>
           </div>
 
           { routeType !== "" && 
@@ -179,6 +179,12 @@ export const GymRouteAddModal: React.FC<GymRouteAddModalData> = (data: GymRouteA
               { routeType === "sport" && 
               <div>
 
+                <h3>Sport Route Type</h3>
+                <input type="checkbox" id="tr" name="Top Rope" value="Top Rope"/>
+                <label> Top Rope</label>
+                <input type="checkbox" id="lead" name="Lead" value="Lead"/>
+                <label> Lead</label>
+
                 <h3>Rope</h3>
                 <CreatableSelect
                   options={
@@ -192,6 +198,10 @@ export const GymRouteAddModal: React.FC<GymRouteAddModalData> = (data: GymRouteA
               }
             </div>
           }
+
+          <button>Add</button>
+          <br></br>
+          <button>Add to Print</button>
         </form>
       </div>
     </Modal>

@@ -4609,6 +4609,11 @@ duplexify@^3.4.2, duplexify@^3.6.0:
     readable-stream "^2.0.0"
     stream-shift "^1.0.0"
 
+easyqrcodejs@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/easyqrcodejs/-/easyqrcodejs-4.0.0.tgz#62043fa236983030735ae3d2627899caea4e461a"
+  integrity sha512-1RF6JzBIDxr+scbdTNcqnzFNpYrUPW34bsFBHPc13LeSkMhV1Vla0YjEladPdskM1Ixmqh3u2bm+6ZEt48BEGw==
+
 ecc-jsbn@~0.1.1:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/ecc-jsbn/-/ecc-jsbn-0.1.2.tgz#3a83a904e54353287874c564b7549386849a98c9"
@@ -5789,12 +5794,29 @@ gridjs-react@^3.0.2:
   resolved "https://registry.yarnpkg.com/gridjs-react/-/gridjs-react-3.0.2.tgz#47b051df91d7a929d1881ae01f8290b2ee26a2ad"
   integrity sha512-7EjRcL6r9KCqOksUn1obHCfGezGXPx+xHXUf8CNFXXvxXDOVGomBmXi6Rt3yIJyQuSYr7k0yB2dnjcygV7tyGA==
 
+gridjs-selection@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/gridjs-selection/-/gridjs-selection-3.1.0.tgz#7ca806664f924f456a12b6f8edd6ee460e4026b8"
+  integrity sha512-0DpjrkesLGZJy/G+963TfJDBMXL5B9XoC9DDA+LvftJpmc3Rjr701x063eKlhPxUVdtRgO4OL6mCxOb2kjEEmw==
+  dependencies:
+    gridjs "^3.1.0"
+    preact "^10.4.8"
+    tslib "^2.0.1"
+
 gridjs@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/gridjs/-/gridjs-3.0.2.tgz#f4008f4a858ef3c7a93b49fa5001f010605c5d3c"
   integrity sha512-v0fg08jPkQjhq/7orStlCE+FQiPjDmKndIywnnRWDFM/neCvd6c8qEanvkjieba1hPzWfbcBPlxxMlePd2x2ng==
   dependencies:
     preact "^10.4.8"
+    tslib "^2.0.1"
+
+gridjs@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/gridjs/-/gridjs-3.1.0.tgz#f2d4b2ec8a5d88df83a5fd4019c23026f4c2ba76"
+  integrity sha512-QIxWUZ3avjBtE8n/3IPdhowgHI4Tjp5HuhYGU91RF4JQla0LvIVNl6DVSWlSWIsYJkGrC7jpenPjeZZ5ULbpQw==
+  dependencies:
+    preact "^10.5.7"
     tslib "^2.0.1"
 
 growly@^1.3.0:
@@ -9449,7 +9471,7 @@ postcss@^8.1.0, postcss@^8.1.6:
     source-map "^0.6.1"
     vfile-location "^3.2.0"
 
-preact@^10.4.8:
+preact@^10.4.8, preact@^10.5.7:
   version "10.5.7"
   resolved "https://registry.yarnpkg.com/preact/-/preact-10.5.7.tgz#f1d84725539e18f7ccbea937cf3db5895661dbd3"
   integrity sha512-4oEpz75t/0UNcwmcsjk+BIcDdk68oao+7kxcpc1hQPNs2Oo3ZL9xFz8UBf350mxk/VEdD41L5b4l2dE3Ug3RYg==
@@ -9642,6 +9664,20 @@ q@^1.1.2:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
   integrity sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
+
+qr.js@0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/qr.js/-/qr.js-0.0.0.tgz#cace86386f59a0db8050fa90d9b6b0e88a1e364f"
+  integrity sha1-ys6GOG9ZoNuAUPqQ2baw6IoeNk8=
+
+qrcode.react@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/qrcode.react/-/qrcode.react-1.0.0.tgz#7e8889db3b769e555e8eb463d4c6de221c36d5de"
+  integrity sha512-jBXleohRTwvGBe1ngV+62QvEZ/9IZqQivdwzo9pJM4LQMoCM2VnvNBnKdjvGnKyDZ/l0nCDgsPod19RzlPvm/Q==
+  dependencies:
+    loose-envify "^1.4.0"
+    prop-types "^15.6.0"
+    qr.js "0.0.0"
 
 qs@6.7.0:
   version "6.7.0"

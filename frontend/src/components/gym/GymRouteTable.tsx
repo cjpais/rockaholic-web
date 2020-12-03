@@ -1,7 +1,9 @@
 import React from "react"
 
+// TODO maybe move to Tabulator.js
 import { html } from "gridjs"
 import { Grid, _, } from 'gridjs-react';
+import { RowSelection } from "gridjs-selection";
 
 import { GymData, GymRoute } from "./Types"
 import { GymHoldColorCircle } from "../common/HoldColorCircle"
@@ -9,10 +11,20 @@ import { GymHoldColorCircle } from "../common/HoldColorCircle"
 export const GymRouteTable: React.FC<GymData> = (routes: GymData) => {
 
   const columns = [
+    {
+      id: "selector",
+      name: "Select",
+      plugin: {
+        component: RowSelection,
+        props: {
+          id: (row: any) => row.cell(1).data
+        }
+      }
+    },
     { 
       name: "Name",
       id: "name",
-      formatter: (cell: string) => html(`<b>${cell}</b>`)
+      formatter: (cell: string) => html(`<b>${cell}</b>`),
     }, 
     { 
       name: "Color",
@@ -65,40 +77,5 @@ export const GymRouteTable: React.FC<GymData> = (routes: GymData) => {
         enabled: false
       }}
     />
-//     <Grid
-//   data={[
-//     ['John', 'john@example.com'],
-//     ['Mike', 'mike@gmail.com']
-//   ]}
-//   columns={['Name', 'Email']}
-//   search={true}
-//   pagination={{
-//     enabled: true,
-//     limit: 1,
-//   }}
-// />
-    // <table>
-    //   <thead>
-    //     <tr>
-    //     </tr>
-    //   </thead>
-    //   <tbody>
-    //     { routes?.map((route: GymRoute) => (
-    //       <tr key={route.id}>
-    //         <td><b>{route.name}</b></td>
-    //         <td><GymHoldColorCircle color={route.color}/></td>
-    //         <td>{route.set_grade}</td>
-    //         <td>
-    //           { route.gym_wall ? route.gym_wall.name : "no wall" }
-    //         </td>
-    //         <td>
-    //           { route.gym_rope ? route.gym_rope.name : "no rope" }
-    //         </td>
-    //         <td>{route.setter.name}</td>
-    //         <td>{route.date_set}</td>
-    //       </tr>
-    //     ))}
-    //   </tbody>
-    // </table>
   )
 }
